@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       {{ template "style.go.css" }}
+    </style>
+  </head>
+  <body>
+    <div class="feeds">
+      {{ range . }}
+        {{ template "feed.go.html" . }}
+      {{ end }}
+    </div>
+  </body>
+</html>
