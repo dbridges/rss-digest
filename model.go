@@ -3,6 +3,7 @@ package main
 import (
 	"regexp"
 	"time"
+	"html"
 	"html/template"
 	"encoding/xml"
 )
@@ -49,7 +50,7 @@ func (c Content) HTML() template.HTML {
 	// Make path to images absolute
 	pat := regexp.MustCompile(`<img src="\/`)
 	body = pat.ReplaceAllString(body, "<img src=\"" + c.BaseURI + "/")
-	return template.HTML(body)
+	return template.HTML(html.UnescapeString(body))
 }
 
 type Link struct {

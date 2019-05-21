@@ -2,7 +2,7 @@
 
 Create a daily RSS Digest and email it to yourself.
 
-Blog post:
+[Blog post](https://medium.com/parallel-thinking/building-a-personal-rss-email-digest-service-in-go-7c8b71ac5b89)
 
 ## Usage
 
